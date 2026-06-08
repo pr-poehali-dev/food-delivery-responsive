@@ -90,22 +90,7 @@ const DeliverySection: React.FC<DeliverySectionProps> = ({ activeCategory }) => 
                 </div>
               </div>
 
-              {/* Яндекс Еда */}
-              <a
-                href="https://eda.yandex.ru"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-              >
-                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-lg"
-                  style={{ backgroundColor: '#FC3F1D' }}>
-                  Я
-                </div>
-                <div>
-                  <div className="text-xs text-gray-400">Заказать через</div>
-                  <div className="font-bold text-sm">Яндекс Еда</div>
-                </div>
-              </a>
+
             </div>
           </div>
 

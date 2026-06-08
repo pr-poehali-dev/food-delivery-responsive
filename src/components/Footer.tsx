@@ -64,19 +64,7 @@ const Footer: React.FC<FooterProps> = ({ activeCategory }) => {
                 <span>Доставка по Севастополю</span>
               </div>
             </div>
-            {/* Яндекс Еда */}
-            <div className="mt-3">
-              <a
-                href="https://eda.yandex.ru"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all hover:opacity-80"
-                style={{ backgroundColor: '#FC3F1D', color: 'white' }}
-              >
-                <span>🍴</span>
-                <span>Яндекс Еда</span>
-              </a>
-            </div>
+
           </div>
 
           {/* Доставка */}
