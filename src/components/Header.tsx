@@ -2,6 +2,8 @@ import React from 'react';
 import Icon from '@/components/ui/icon';
 import { Category, categoryConfig } from '@/data/menu';
 
+const LOGO_URL = 'https://cdn.poehali.dev/projects/e4f979cf-f29b-48da-b7ce-81fed7878036/bucket/0acc37b1-3c05-480d-9ebe-f3b252eeee56.png';
+
 interface HeaderProps {
   activeCategory: Category;
   onCategoryChange: (cat: Category) => void;
@@ -25,14 +27,11 @@ const Header: React.FC<HeaderProps> = ({ activeCategory, onCategoryChange, cartC
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Логотип */}
           <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollTo('hero')}>
-            <div className="leading-none">
-              <div className="text-white font-black text-sm md:text-base tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                ТА САМАЯ
-              </div>
-              <div className="text-white font-black text-lg md:text-2xl tracking-wider -mt-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                ПИЦЦА
-              </div>
-            </div>
+            <img
+              src={LOGO_URL}
+              alt="Та самая пицца"
+              className="h-9 md:h-11 w-auto object-contain"
+            />
           </div>
 
           {/* Навигация — десктоп */}
@@ -95,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ activeCategory, onCategoryChange, cartC
       </div>
 
       {/* Мобильная навигация */}
-      <div className="md:hidden border-t border-white/20 overflow-x-auto scrollbar-hide">
+      <div className="md:hidden border-t border-white/20 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
         <div className="flex items-center gap-4 px-4 py-2 min-w-max">
           {(['pizza', 'rolls', 'drinks'] as Category[]).map((cat) => (
             <button
@@ -106,24 +105,9 @@ const Header: React.FC<HeaderProps> = ({ activeCategory, onCategoryChange, cartC
               {categoryConfig[cat].label}
             </button>
           ))}
-          <button
-            onClick={() => scrollTo('promotions')}
-            className="text-white text-xs font-semibold opacity-65 hover:opacity-100 transition-all whitespace-nowrap"
-          >
-            Акции
-          </button>
-          <button
-            onClick={() => scrollTo('delivery')}
-            className="text-white text-xs font-semibold opacity-65 hover:opacity-100 transition-all whitespace-nowrap"
-          >
-            Доставка
-          </button>
-          <button
-            onClick={() => scrollTo('contacts')}
-            className="text-white text-xs font-semibold opacity-65 hover:opacity-100 transition-all whitespace-nowrap"
-          >
-            Контакты
-          </button>
+          <button onClick={() => scrollTo('promotions')} className="text-white text-xs font-semibold opacity-65 hover:opacity-100 transition-all whitespace-nowrap">Акции</button>
+          <button onClick={() => scrollTo('delivery')} className="text-white text-xs font-semibold opacity-65 hover:opacity-100 transition-all whitespace-nowrap">Доставка</button>
+          <button onClick={() => scrollTo('contacts')} className="text-white text-xs font-semibold opacity-65 hover:opacity-100 transition-all whitespace-nowrap">Контакты</button>
         </div>
       </div>
     </header>

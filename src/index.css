@@ -367,3 +367,24 @@ html {
 .opacity-0-init {
   opacity: 0;
 }
+
+/* ========= ГЛОБАЛЬНЫЕ ФИКСЫ ========= */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Убираем scrollbar у мобильной навигации */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

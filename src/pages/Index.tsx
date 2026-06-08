@@ -82,7 +82,7 @@ const Index = () => {
   };
 
   return (
-    <div className={`min-h-screen transition-all duration-500 ${cfg.themeClass}`}>
+    <div className={`min-h-screen transition-all duration-500 overflow-x-hidden w-full ${cfg.themeClass}`}>
       <Header
         activeCategory={activeCategory}
         onCategoryChange={handleCategoryChange}
